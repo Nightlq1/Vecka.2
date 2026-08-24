@@ -5,7 +5,7 @@ Linux ip addr
 Datalänk:Mac adresser och dataframes ligger här,
 
 Ethernet-Ramen: Den är som ett kuveret, vad kommer den från och vad ska de till så funkar de,
-hela dataoaket skickas och vi delar up dom till slices och dom ligger alltid i ordning.
+hela datapaket skickas och vi delar up dom till slices och dom ligger alltid i ordning.
 "Mac huvudet" destination och source länk längden på paketet använder information för att förstå hur mycket den ska läsa av "ftcs"
 Mac bryr sig om vad som ska iväg, men inte switch bara vart den ska Prio är vart den ska
 I Ethernet är en vanlig mac adress 48bitar
