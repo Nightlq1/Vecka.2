@@ -43,11 +43,20 @@ default gateway/router: 10.80.72.1 det är nerwork address
 Network inteface:Wlo1
 
 Mac addresserna:   a0:ad:9f:52:03:df    28:95:29:bf:4f:37
+  
+lspci -k | grep -A3 -i network: information om datorns nätverkskort och drivrutin
+lspci -k: visar all PCI-enheter i datorn och vilken drivrutin avänds av datorn
+lspci -nnk | grep -A4 -i network: visar mer information
+nmcli är ett verktyg för att kontrollera och konfigurera nätverk via terminalen.
+nmcli dev wifi connect AP5 password '12345678': anslut till Wi-Fi-nätverket AP5 med lösenordet 12345678.
+
+Sudo apt install -blah blah för att laddar ner något som super användare.
 
 
-Sudo install -blah blah för att laddar ner något som super användare.
 
 1.Förklara vad en Mac-address är och var switch lagrar dem
 2.Läsa show mac address-table och säga vilken enhet som sitter på vilken port.
-3.Frånga trafik i wireshark och peka ut avsändarens och mottagarens MAC-adress i en ram.
-4. Förklara vad ARP gör och varför de behövs.
+3.Fånga trafik i wireshark och peka ut avsändarens och mottagarens MAC-adress i en ram.
+4.Förklara vad ARP gör och varför de behövs.
+
+1.
