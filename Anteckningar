@@ -66,7 +66,7 @@ Sudo apt install -blah blah för att laddar ner något som super användare.
 
 
 configure terminal – Går in i konfigurationsläget.
-hostname andre – Ändrar namnet på enheten till andre.
+hostname Harvey – Ändrar namnet på enheten till andre.
 interface vlan 1 – Går in på VLAN 1-interfacet.
 ip address 168.173.1.10 255.255.255.0 – Ger interfacet IP-adress och subnet mask.
 no shutdown – Slår på ett interface/port.
