@@ -60,3 +60,25 @@ Sudo apt install -blah blah för att laddar ner något som super användare.
 4.Förklara vad ARP gör och varför de behövs.
 
 1.
+
+
+
+
+
+configure terminal – Går in i konfigurationsläget.
+hostname andre – Ändrar namnet på enheten till andre.
+interface vlan 1 – Går in på VLAN 1-interfacet.
+ip address 168.173.1.10 255.255.255.0 – Ger interfacet IP-adress och subnet mask.
+no shutdown – Slår på ett interface/port.
+shutdown – Stänger av ett interface/port.
+interface fastethernet 0/1 – Går in på FastEthernet-port 0/1.
+interface gigabitethernet 0/1 – Går in på GigabitEthernet-port 0/1.
+show ip interfaenable – Går in i privileged EXEC-läge (#).
+ce brief – Visar snabb översikt över portar, IP-adresser och up/down-status.
+show interfaces fastethernet 0/1 – Visar detaljerad information om Fa0/1.
+show interfaces vlan 1 – Visar detaljerad information om VLAN 1-interfacet.
+show running-config – Visar konfigurationen som används just nu.
+ip default-gateway 192.168.1.1 – Anger switchens default gateway.
+ping 192.168.1.2 – Testar om du kan nå IP-adressen.
+exit – Går tillbaka ett steg.
+end – Går direkt tillbaka till #-läget.
