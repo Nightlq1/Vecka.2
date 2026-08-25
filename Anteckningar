@@ -61,7 +61,16 @@ Sudo apt install -blah blah för att laddar ner något som super användare.
 
 1.
 
-
+harvey(config-if)#Interface Gigabitethernet0/0
+harvey(config-if)#ip address 192.168.10.1 255.255.255.0
+harvey(config-if)#no shutdown
+harvey(config)#ip dhcp pool LAN
+harvey(dhcp-config)#network 192.168.10.1 255.255.255.0
+harvey(dhcp-config)#default-router 192.168.10.1
+harvey(dhcp-config)#dns-server 192.168.10.1
+harvey(dhcp-config)#dns-server 8.8.8.8
+harvey(dhcp-config)#exit
+harvey(config)#end
 
 
 
