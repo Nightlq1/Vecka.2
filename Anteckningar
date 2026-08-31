@@ -59,7 +59,38 @@ Sudo apt install -blah blah för att laddar ner något som super användare.
 3.Fånga trafik i wireshark och peka ut avsändarens och mottagarens MAC-adress i en ram.
 4.Förklara vad ARP gör och varför de behövs.
 
-1.
+1.Mottagarens adress står alltid först i en dataram.
+
+2.12 hexadecimala tecken har den, första halvan är 6tecken som kallas för OUI (Organizationally Unique identifier)
+
+3.Switchen fyller i sin tabell helt själv och helt automatiskt genom en process som kallas MAC-inlärning. Och den får sina anteckningarna direkt från den inkommande nätverkstrafiken.
+
+4.Switchen flödar ramen (unknown unicast flooding) genom att skicka ut en kopia på alla aktiva portar, förutom den port som ramen kom in på.
+
+5.Den sitter kvar i 5minuter och den försvinner om switchen inte ser någon trafik från enheten under den tiden. Det görs för att hålla MAC-tabellen uppdaterad.
+
+6.Vid broadcast används MAC-adressen FF:FF:FF:FF:FF:FF. Det betyder att meddelandet ska skickas till alla enheter i det lokala nätverket. 
+
+7.ARP-frågan går till alla eftersom datorn inte vet vilken enhet som har den IP-adress den söker. ARP-svaret går till en eftersom den rätta enheten svarar med sin MAC-adress. 
+
+8.Den frågar efter routerns MAC-adress (default gateway)
+
+9.Dynamic och static: 
+Dynamic betyder inlärd 
+Static: vi lär den 
+
+10. port visar notconnect kan va för kabel är trasig kabel sitter i fel port.
+
+11 Fel VLAN
+
+12.gi0/2 för att den har half medan dom andra har full
+
+13. När en switch får en ram för första gången vet den inte vilken port mottagaren finns på.
+Därför skickar switchen ramen till alla portar.
+När mottagaren svarar lär sig switchen vilken port mottagaren finns på.
+Switchen sparar denna information i sin tabell i 5 minuter bara.
+Nästa gång kan switchen skicka ramen direkt till rätt port.
+
 
 harvey(config-if)#Interface Gigabitethernet0/0
 harvey(config-if)#ip address 192.168.10.1 255.255.255.0
