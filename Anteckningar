@@ -122,3 +122,72 @@ ip default-gateway 192.168.1.1 – Anger switchens default gateway.
 ping 192.168.1.2 – Testar om du kan nå IP-adressen.
 exit – Går tillbaka ett steg.
 end – Går direkt tillbaka till #-läget.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tänk dig att hela ditt nätverk är en stor postvärld där datorer vill skicka brev till varandra. 
+För att breven ska hitta rätt har du byggt vägar, ställt ut postterminaler och skrivit kartinstruktioner.
+
+Enheterna i din nätverksvärld
+
+Datorerna och Servrarna (Husen): De är avsändare och mottagare i nätverket (Server0, PC2, PC3, Server1). 
+De vill prata genom att skicka paket med datainnehåll.
+
+Switchen (Postsorteraren i trappuppgången): Arbetar på Lager 2. 
+Den bryr sig bara om vad prylar heter "på riktigt" (fysiska MAC-adresser). 
+Den skickar snabbt brev mellan datorer som bor i samma kvarter utan att bry sig om vilket postnummer de har.
+
+Routrarna (Postterminalerna): Arbetar på Lager 3. 
+De läser av postnummer (IP-adresser) och behövs så fort ett paket ska lämna sin egen stad och resa till en annan.
+
+Subnät – De fyra städerna
+En router stänger ute trafik och delar upp världen i isolerade områden. Du har byggt fyra städer (subnät):
+
+    Stad 1 (192.168.1.0): Kvarteret längst till vänster där Server0 bor.
+
+    Stad 2 (192.168.2.0): Mittenstaden där PC-datorerna, switchen och Router1 möts.
+
+    Stad 3 (192.168.3.0): Vägen som kopplar ihop mitten med Router2.
+
+    Stad 4 (192.168.4.0): Kvarteret längst till höger där Server1 bor.
+
+Adresser och Kartskyltar
+
+
+IP-adress (Gatuadressen): Alla enheter har en gatuadress. 
+De första tre siffergrupperna visar vilken stad enheten bor i, och den sista siffran visar vilket hus det är (t.ex. 192.168.1.1).
+
+Default Gateway (Dörren ut): Om en dator vill skicka ett brev till en annan stad vet den inte vägen på egen hand. 
+Den lämnar alltid brevet till sin "Default Gateway" (routerns dörr i den staden) som tar över ansvaret.
+
+Routingtabellen (Kartboken): Routerns minne. 
+Bokstaven C visar städer som ligger direkt utanför routerns egna dörrar.
+Bokstaven S visar de vägskyltar du har spikat upp manuellt: "Om paketet ska till Stad 4, skicka det åt det här hållet".
+
+ (Next-Hop)
+Att skicka paket mellan routrar fungerar som ett stafettlopp.
+Router1 kan inte kasta paketet ända fram till slutdestinationen direkt. 
+Den måste räcka över paketet till sin närmsta granne i samma korsning (192.168.2.2). Grannen tar emot stafettpinnen,
+kollar i sin egen kartbok och springer sista biten med paketet.
