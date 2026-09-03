@@ -54,10 +54,11 @@ Sudo apt install -blah blah för att laddar ner något som super användare.
 
 
 
-1.Förklara vad en Mac-address är och var switch lagrar dem
+1.Förklara vad en Mac-address är och var switch lagrar dem- Mac addressen är enhetenshårdvara
 2.Läsa show mac address-table och säga vilken enhet som sitter på vilken port.
 3.Fånga trafik i wireshark och peka ut avsändarens och mottagarens MAC-adress i en ram.
-4.Förklara vad ARP gör och varför de behövs.
+4.Förklara vad ARP gör och varför de behövs. "ARP används när vi känner till destinations-IP:t men inte MAC-adressen. -->
+Datorn skickar då en broadcast i det lokala nätet och frågar vilken enhet som har IP-adressen. Den rätta enheten svarar med sin MAC-adress."
 
 1.Mottagarens adress står alltid först i en dataram.
 
